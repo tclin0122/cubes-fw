@@ -17,7 +17,7 @@ The code on this repository runs on the Cortex-M3 core embedded on the SmartFusi
 ## Getting Started
 
 - Clone this repository/unzip the archive downloaded via GitHub
-- Download SoftConsole (any latest version should work)
+- Download SoftConsole (any latest version should work)(2023 and later version didn't support the ARM cross compiler so cannot be used)
 - Import this project into SoftConsole
 - Most of the code is under `main.c`, in the `while (1)` loop:
   - `REQ_HK` data is prepared once a second; the second counting is handled
@@ -131,7 +131,7 @@ in the `BOARD_ID` macro, defined via a `-D` compiler flag:
 9. Move the FlashPro5 programmer from the board you just programmed to the next one you
    want to program.
 10. Repeat steps 4-7.
-11. Reset the CUBES stackup by power-cycling the `5V_CUBES` power rail.
+11. Reset the CUBES stackup by power-cycling the `3.3V_CUBES` power rail.
 12. Perform a `REQ_HK` MSP command from each of the two CUBES boards and ensure the
     readouts "make sense".
 
